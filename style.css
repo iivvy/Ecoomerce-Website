@@ -17,7 +17,7 @@ Rubik: 300, 408, 500, 600 ;
     --font-small: 13px;
     --font-smaller: 11px;
     --percent100: 100%;
-    --percent100: 100%;
+    --percent50: 50%;
     --fw3: 300;
 
     --fw6: 600;
@@ -140,6 +140,18 @@ h4{
 
 }
 
+
+.mobile-hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
 /*--------HEADER-------*/
 header li > a {
     display: flex;
@@ -184,6 +196,122 @@ header li > a {
     display: block;
 
 }
+/*HEADER NAV*/
+
+.header-nav{
+    padding: 0.5em 0;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid var(--border-color);
+
+}
+
+
+
+
+
+.trigger{
+    font-size: 1.5em;
+    display: flex;
+    padding: 0.25em;
+    margin-right:0.5em ;
+}
+
+
+.logo a {
+    font-family:'Poppins';
+    font-size:1.75em;
+    position: relative;
+    font-weight: var(--fw8);
+    display: flex;
+    padding-left: 0.7em;
+    margin-right: 2em;
+
+}
+
+.circle{
+    position:absolute;
+    top:-15px;
+    left:0;
+    width:38px;
+    height:38px;
+    border-radius: var(--percent50);
+    background-color: var(--light-bq-color);
+    z-index: 1;
+}
+.circle::before{
+    content: '';
+    position:absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--percent50);
+    background-color: var(--secondary-color);
+    bottom: 5px;
+    right: 5px;
+    opacity: .4;
+}
+.header-nav nav > ul{
+    line-height: 100px;
+    gap: 2em;
+
+}
+.fly-item{
+    position: absolute;
+    height: 16px;
+    font-size: var(--font-smaller);
+    padding: 3px;
+    text-align: center;
+    line-height: 10px;
+    color: var(--white-color);
+
+}
+
+
+nav .fly-item{
+    top: 50%;
+    margin-top: -24px;
+    width: 30px;
+    border-radius:3px;
+    right: -32px;
+    background-color: var(--primary-color);
+
+}
+.header-nav .right{
+    position: relative;
+    margin-left: auto;
+}
+.header-nav  .right .icon-large{
+    position: relative;
+
+}
+.header-nav .right .fly-item{
+    top:0;
+    right: 16px;
+    width: 16px;
+    background-color: var(--secondary-dark-color);
+    border: var(--percent50);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -192,5 +320,23 @@ header li > a {
     @media screen and (min-width:992px){
         .container{
             padding: 0 2em;
+        }
+        .desktop-hide{
+            display: none;
+        }
+        .mobile-hide{
+            display: block;
+        }
+        .logo a {
+            margin-right: 2em;
+        }
+        .header-nav{
+            padding: 0;
+            margin: 0;
+            border-bottom: 0;
+        }
+        .header-nav .right li > a{
+            margin-left: 1em;
+
         }
     }
