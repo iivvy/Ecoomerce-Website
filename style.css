@@ -393,8 +393,13 @@ nav .fly-item{
     align-items: center;
 }
 
+.dpt-menu .has-child:hover ul{
+    display: block;
+}
+.dpt-menu .has-child li a:hover{
+    text-decoration: underline ;
 
-
+}
 
 
 
@@ -579,11 +584,23 @@ form.search button:hover{
             background-repeat: no-repeat;
             background-size:auto ;
         }
+        .dpt-menu .has-child > :where(ul,.mega)::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(225,225,225,1) 0%,rgba(225,225,225,0));
+
+        }
         .dpt-menu .mega{
-            display: block;
+            width: auto;
+            min-width: var(--percent100);
+
         }
         .dpt-menu .has-child:hover .mega{
-            
+            display: flex;
         }
        
 
