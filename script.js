@@ -33,12 +33,14 @@ function toggle(e){
     e.preventDefault();
     submenu.forEach((item)=> item != this ? item.closest('.has-child').classList.remove('expand'):null);
     if (this.closest('.has-child').classList != 'expand');
+    
     this.closest('.has-child').classList.toggle('expand');
+    console.log("clickeed")
 }
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    direction: 'vertical',
+
     loop: true,
   
     // If we need pagination
@@ -46,14 +48,5 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-pagination',
     },
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
   
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
   });
